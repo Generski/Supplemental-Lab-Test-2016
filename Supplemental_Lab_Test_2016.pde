@@ -18,7 +18,9 @@ void setup()
     people[i] = new Person(pHeight, pWidth);
   }
   
-  ufo = new UFO(width/2, height/2 - 50, 100, 20);
+  float ufoWidth = map(125, 0, 500, 0, width);
+  float ufoHeight = ufoWidth/5;
+  ufo = new UFO(width/2, height/2 - 2 * ufoHeight, ufoWidth, ufoHeight);
 }
 
 void draw()
@@ -45,4 +47,6 @@ void draw()
   
   //UFO
   ufo.display();
+  ufo.changeLights();
+  ufo.move(3);
 }

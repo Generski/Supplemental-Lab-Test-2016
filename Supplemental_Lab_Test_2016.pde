@@ -3,7 +3,7 @@ Person[] people = new Person[5];
 
 void setup()
 {
-  size(500, 500);
+  size(500, 500, P2D);
 
   for (int i = 0; i < stars.length; i++)
   {
@@ -13,7 +13,8 @@ void setup()
   for (int i = 0; i < people.length; i++)
   {
     float pHeight = map(50, 0, 500, 0, height);
-    people[i] = new Person(pHeight);
+    float pWidth = map(30, 0, 500, 0, width);
+    people[i] = new Person(pHeight, pWidth);
   }
 }
 
@@ -36,5 +37,6 @@ void draw()
   for (int i = 0; i < people.length; i++)
   {
     people[i].display();
+    people[i].move();
   }
 }

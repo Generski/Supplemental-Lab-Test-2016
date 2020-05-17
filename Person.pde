@@ -14,7 +14,7 @@ class Person
     h = tempH;
     w = tempW;
     x = random(w/2, width - w);
-    y = random(height/2, height - h/2);
+    y = random(height/2, height - h);
 
     if (moveDir >= 0)
     {

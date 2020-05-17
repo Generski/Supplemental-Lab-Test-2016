@@ -1,5 +1,6 @@
 Star[] stars = new Star[200];
 Person[] people = new Person[5];
+UFO ufo;
 
 void setup()
 {
@@ -16,6 +17,8 @@ void setup()
     float pWidth = map(30, 0, 500, 0, width);
     people[i] = new Person(pHeight, pWidth);
   }
+  
+  ufo = new UFO(width/2, height/2 - 50, 100, 20);
 }
 
 void draw()
@@ -39,4 +42,7 @@ void draw()
     people[i].display();
     people[i].move();
   }
+  
+  //UFO
+  ufo.display();
 }
